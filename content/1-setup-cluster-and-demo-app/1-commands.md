@@ -9,7 +9,7 @@ kind version
 
 ## Install Helm
 
-```bash
+```bash {"terminalRows":"32"}
 sudo apt-get install curl gpg apt-transport-https --yes
 curl -fsSL https://packages.buildkite.com/helm-linux/helm-debian/gpgkey | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
 echo "deb [signed-by=/usr/share/keyrings/helm.gpg] https://packages.buildkite.com/helm-linux/helm-debian/any/ any main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
@@ -42,7 +42,7 @@ kubectl get nodes
 kubectl cluster-info
 ```
 
-## 5. Install bash auto completion 
+## 5. Install bash auto completion
 
 ```bash
 sudo apt-get install -y bash-completion
@@ -63,12 +63,11 @@ source ~/.bashrc
 ```
 
 ## 7. Try it!
+
 ```bash
 k get pods -A
 k get svc -A
 ```
-
-
 
 ## 8. Let's install a demo application with a eCommerce product listing page
 
@@ -78,16 +77,19 @@ kubectl apply -f https://raw.githubusercontent.com/odigos-io/simple-demo/main/ku
 ```
 
 ## 9. Check the pods
+
 ```bash
 k get pods -A
 ```
 
 ## 10. Here are the services
+
 ```bash
 k get svc -A
 ```
 
 ## 11. We forward the service to port 8080
+
 ```bash
 k port-forward --address 0.0.0.0 svc/frontend -n demo-app 8080:8080 &
 ```
