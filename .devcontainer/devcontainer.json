@@ -3,8 +3,8 @@
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 
   "hostRequirements": {
-    "cpus": 8,
-    "memory": "32gb"
+    "cpus": 4,
+    "memory": "16gb"
   },
 
   "features": {
