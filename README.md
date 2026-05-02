@@ -138,3 +138,25 @@ The kind cluster is created from `misc/kind-config.yaml` (1 control-plane node +
 ```bash
 kind create cluster --config misc/kind-config.yaml
 ```
+
+---
+
+## Machine sizing 
+
+This was the default:
+
+```json
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "16gb"
+  },
+```
+
+But to save resources, I changed it: 
+
+```json
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "8gb"
+  },
+```
