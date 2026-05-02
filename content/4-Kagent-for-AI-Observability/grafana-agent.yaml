@@ -4,6 +4,7 @@ metadata:
   name: grafana-agent
   namespace: kagent
 spec:
+  type: Declarative
   declarative:
     modelConfig: gemini-model-config
     systemMessage: |

@@ -112,6 +112,9 @@ spec:
             requests:
               cpu: 25m
               memory: 32Mi
+            limits:
+              cpu: 100m
+              memory: 64Mi
 ---
 # A Service in broken-app, also pointing at a selector that won't
 # match anything here — included so K8sGPT can flag it too.
